@@ -8,3 +8,6 @@ class ExamplePlugin : Plugin<Project> {
     project.extensions.create("exampleExtension", ExampleExtension::class.java, "hello")
   }
 }
+
+open class ExampleExtension(var myValue: String) {
+}

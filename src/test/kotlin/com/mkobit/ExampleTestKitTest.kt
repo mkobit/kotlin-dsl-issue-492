@@ -26,9 +26,8 @@ class ExampleTestKitTest {
         .withPluginClasspath()
   }
 
-
   @Test
-  fun `can print out extensions`() {
+  fun `can println out extensions`() {
     gradleKts.appendText("""
       println(extensions)
     """.trimIndent())
