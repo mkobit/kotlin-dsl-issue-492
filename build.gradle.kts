@@ -1,5 +1,6 @@
 plugins {
   `java-gradle-plugin`
+  // Case 1:
   `kotlin-dsl`
 }
 
