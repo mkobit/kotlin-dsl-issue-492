@@ -1,7 +1,7 @@
 plugins {
   `java-gradle-plugin`
-  // Case 1:
-  `kotlin-dsl`
+  // Case 2:
+  `embedded-kotlin`
 }
 
 tasks {
