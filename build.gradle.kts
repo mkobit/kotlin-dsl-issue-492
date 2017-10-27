@@ -1,7 +1,7 @@
 plugins {
   `java-gradle-plugin`
-  // Case 2:
-  `embedded-kotlin`
+  // Case 3:
+  kotlin("jvm") version "1.1.51"
 }
 
 tasks {
@@ -15,6 +15,8 @@ repositories {
 }
 
 dependencies {
+  // Case 3:
+  implementation(kotlin("stdlib"))
   testImplementation("junit:junit:4.12")
 }
 
