@@ -6,7 +6,7 @@ plugins {
 
 tasks {
   "wrapper"(Wrapper::class) {
-    gradleVersion = "4.3-rc-4"
+    gradleVersion = "4.5.1"
   }
 }
 
