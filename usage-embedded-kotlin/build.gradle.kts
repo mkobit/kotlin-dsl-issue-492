@@ -1,17 +1,6 @@
 plugins {
   `java-gradle-plugin`
-  // Case 2:
   `embedded-kotlin`
-}
-
-tasks {
-  "wrapper"(Wrapper::class) {
-    gradleVersion = "4.5.1"
-  }
-}
-
-repositories {
-  jcenter()
 }
 
 dependencies {
