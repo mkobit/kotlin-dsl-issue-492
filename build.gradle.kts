@@ -13,3 +13,12 @@ subprojects {
   }
 }
 
+
+tasks {
+  withType<Test> {
+    testLogging {
+      showStackTraces = true
+      setExceptionFormat("short")
+    }
+  }
+}
