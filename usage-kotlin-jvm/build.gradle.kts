@@ -1,21 +1,9 @@
 plugins {
   `java-gradle-plugin`
-  // Case 3:
-  kotlin("jvm") version "1.1.51"
-}
-
-tasks {
-  "wrapper"(Wrapper::class) {
-    gradleVersion = "4.5.1"
-  }
-}
-
-repositories {
-  jcenter()
+  kotlin("jvm")
 }
 
 dependencies {
-  // Case 3:
   implementation(kotlin("stdlib"))
   testImplementation("junit:junit:4.12")
 }
