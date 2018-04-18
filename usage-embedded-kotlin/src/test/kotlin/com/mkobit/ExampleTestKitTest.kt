@@ -21,6 +21,7 @@ class ExampleTestKitTest {
         id("com.mkobit.example-plugin")
       }
     """.trimIndent())
+    gradleKts.appendText(System.lineSeparator())
     gradleRunner = GradleRunner.create()
         .withProjectDir(projectDir)
         .withPluginClasspath()
