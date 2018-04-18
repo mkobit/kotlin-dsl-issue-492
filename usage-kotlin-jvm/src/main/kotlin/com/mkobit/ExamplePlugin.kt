@@ -9,5 +9,4 @@ class ExamplePlugin : Plugin<Project> {
   }
 }
 
-open class ExampleExtension(var myValue: String) {
-}
+open class ExampleExtension(var myValue: String)
