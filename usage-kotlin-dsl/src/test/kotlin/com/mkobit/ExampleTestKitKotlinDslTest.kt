@@ -61,6 +61,21 @@ class ExampleTestKitKotlinDslTest {
     get() = projectDir.resolve("build.gradle")
 
   @Test
+  fun `(kotlin) can println out plugins`() {
+    gradleRunner.kotlinBuildFile.run {
+      writePluginsBlock()
+      appendText("""
+          for (plugin in plugins) {
+              println(plugin)
+          }
+      """.trimIndent())
+    }
+    printBuildFile()
+
+    gradleRunner.build()
+  }
+
+  @Test
   fun `(kotlin) can println out extensions`() {
     gradleRunner.kotlinBuildFile.run {
       writePluginsBlock()
@@ -109,6 +124,21 @@ class ExampleTestKitKotlinDslTest {
           println(exampleExtension.myValue)
       """.trimIndent())
     }
+
+    gradleRunner.build()
+  }
+
+  @Test
+  fun `(groovy) can println out plugins`() {
+    gradleRunner.groovyBuildFile.run {
+      writePluginsBlock()
+      appendText("""
+          for (plugin in plugins) {
+              println(plugin)
+          }
+      """.trimIndent())
+    }
+    printBuildFile()
 
     gradleRunner.build()
   }
